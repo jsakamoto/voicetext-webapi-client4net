@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$-beta</version>
+    <title>$title$</title>
+    <authors>J.Sakamoto</authors>
+    <owners>J.Sakamoto</owners>
+    <licenseUrl>https://github.com/jsakamoto/voicetext-webapi-client4net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsakamoto/voicetext-webapi-client4net</projectUrl>
+    <!--
+    <iconUrl/>
+    -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>The Web API client of [HOYA Voice Text Web API](https://cloud.voicetext.jp/webapi) for .NET</summary>
+    <description>
+      This library is the client of [HOYA Voice Text Web API](https://cloud.voicetext.jp/webapi) for .NET.
+    </description>
+    <releaseNotes>
+      <![CDATA[
+      v.1.0
+      - First release.
+      ]]>
+    </releaseNotes>
+    <tags>voicetext,voice,speach</tags>
+  </metadata>
+</package>
