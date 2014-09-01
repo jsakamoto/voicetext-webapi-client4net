@@ -49,28 +49,18 @@ namespace VoiceTextWebAPI.Client
             return bytes;
         }
 
-        //public async Task<byte[]> GetVoiceAsync(string text)
-        //{
-        //    var httpClinet = CreateHttpClient();
-        //    var content = BuildHttpRequestContent(text);
-        //    var response = await httpClinet.PostAsync(this.APIEndPoint, content);
-        //    if (response.StatusCode != HttpStatusCode.OK) ThrowVoiceTextException(response);
-        //    var bytes = await response.Content.ReadAsByteArrayAsync();
-        //    return bytes;
-        //}
-
         public Task<byte[]> GetVoiceAsync(string text)
         {
             var httpClinet = CreateHttpClient();
             var content = BuildHttpRequestContent(text);
-            var x = httpClinet.PostAsync(this.APIEndPoint, content)
+            return httpClinet.PostAsync(this.APIEndPoint, content)
                 .ContinueWith(t =>
                 {
                     var response = t.Result;
                     if (response.StatusCode != HttpStatusCode.OK) ThrowVoiceTextException(response);
                     return response.Content.ReadAsByteArrayAsync();
-                });
-            return x.Unwrap();
+                })
+                .Unwrap();
         }
 
         private HttpClient CreateHttpClient()
