@@ -53,11 +53,7 @@
     <Compile Include="VoiceTextException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
     <None Include="VoiceTextWebAPI.Client.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="LICENSE" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
