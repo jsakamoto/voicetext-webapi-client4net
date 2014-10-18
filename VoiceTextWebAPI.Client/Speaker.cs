@@ -12,6 +12,7 @@ namespace VoiceTextWebAPI.Client
         Haruka,
         Hikari,
         Takeru,
-        Santa
+        Santa,
+        Bear
     }
 }
