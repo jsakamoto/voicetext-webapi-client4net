@@ -23,6 +23,8 @@ namespace VoiceTextWebAPI.Client
 
         public int Volume { get; set; }
 
+        public Format Format { get; set; }
+
         public string APIKey { get; set; }
 
         public Uri APIEndPoint { get; set; }
@@ -36,6 +38,7 @@ namespace VoiceTextWebAPI.Client
             this.Pitch = 100;
             this.Speed = 100;
             this.Volume = 100;
+            this.Format = Format.WAV;
         }
 
         public byte[] GetVoice(string text)
@@ -80,6 +83,7 @@ namespace VoiceTextWebAPI.Client
                 {"pitch", this.Pitch.ToString()},
                 {"speed", this.Speed.ToString()},
                 {"volume", this.Volume.ToString()},
+                {"format", this.Format.ToString().ToLower()},
             };
             if (this.Emotion != Emotion.Default)
             {

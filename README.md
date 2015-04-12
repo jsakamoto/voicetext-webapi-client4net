@@ -6,14 +6,14 @@ This is the clinet librray of HOYA Voice Text Web API for .NET.
 Istllation
 ----------
 
-You can install via nuget.org **with pre-release switch.**
+You can install via nuget.org
 
-    PM> Install-Package VoiceTextWebAPI.Client -pre
+    PM> Install-Package VoiceTextWebAPI.Client
 
 Usage
 -----
 
-```CSharp
+```csharp
 using VoiceTextWebAPI.Client;
 ...
 public async void btn_OnClick()
@@ -26,7 +26,8 @@ public async void btn_OnClick()
     EmotionLevel = EmotionLevel.High,
     Volume = 50,
     Speed = 120,
-    Pitch = 120
+    Pitch = 120,
+    Format = Format.WAV
   };
   var bytes = await client.GetVoiceAsync("こんにちは。");
   File.WriteAllBytes(".\\result.wav", bytes);

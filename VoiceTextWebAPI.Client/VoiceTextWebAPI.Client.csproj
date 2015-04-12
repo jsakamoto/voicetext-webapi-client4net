@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Emotion.cs" />
     <Compile Include="EmotionLevel.cs" />
+    <Compile Include="Format.cs" />
     <Compile Include="Speaker.cs" />
     <Compile Include="VoiceTextClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
