@@ -10,6 +10,7 @@ namespace VoiceTextWebAPI.Client
     {
         WAV,
         OGG,
-        AAC
+        AAC,
+        MP3
     }
 }
