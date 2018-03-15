@@ -36,4 +36,4 @@ public async void btn_OnClick()
 
 License
 -------
-Copyright (c) 2014 @jsakamoto. Licensed under the MIT license.
+Copyright (c) 2014-2018 @jsakamoto. Licensed under the MIT license.
