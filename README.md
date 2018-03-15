@@ -1,4 +1,4 @@
-﻿VoiceText WebAPI Client for .NET
+﻿VoiceText WebAPI Client for .NET [![NuGet Package](https://img.shields.io/nuget/v/VoiceTextWebAPI.Client.svg)](https://www.nuget.org/packages/VoiceTextWebAPI.Client/)
 ================================
 
 This is the clinet librray of HOYA Voice Text Web API for .NET.
