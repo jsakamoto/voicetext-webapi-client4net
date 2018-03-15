@@ -18,6 +18,8 @@
     </description>
     <releaseNotes>
       <![CDATA[
+      v.2.0
+      - [Breaking Change] Remove aac format. 
       v.1.4
       - Add mp3 format.
       v.1.3
