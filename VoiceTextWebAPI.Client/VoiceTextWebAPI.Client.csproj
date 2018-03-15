@@ -1,75 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4359A4B5-6122-4B18-A72B-905BC380C46D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VoiceTextWebAPI.Client</RootNamespace>
-    <AssemblyName>VoiceTextWebAPI.Client</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+    <Authors>J.Sakamoto</Authors>
+    <Version>2.0.0.1</Version>
+    <Description>This library is the client of [HOYA Voice Text Web API](https://cloud.voicetext.jp/webapi) for .NET.</Description>
+    <Copyright>Copyright © J.Sakamoto 2014-2018, MIT License</Copyright>
+    <Product>.NET Client for VoiceText Web API</Product>
+    <PackageLicenseUrl>https://github.com/jsakamoto/voicetext-webapi-client4net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jsakamoto/voicetext-webapi-client4net</PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageTags>voicetext,voice,speach</PackageTags>
+    <PackageReleaseNotes>v.2.0.0.1
+- support .NET Standard 2.0
+v.2.0
+- [Breaking Change] Remove aac format. 
+v.1.4
+- Add mp3 format.
+v.1.3
+- Can chose voice file format from wav/ogg/aac.
+v.1.2
+- Add speaker "Bear"(Berserk Bear)!
+v.1.1
+- Add speaker "Santa"(Santa Claus)!
+v.1.0
+- First release.
+</PackageReleaseNotes>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.XML" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Emotion.cs" />
-    <Compile Include="EmotionLevel.cs" />
-    <Compile Include="Format.cs" />
-    <Compile Include="Speaker.cs" />
-    <Compile Include="VoiceTextClient.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VoiceTextErrorResponse.cs" />
-    <Compile Include="VoiceTextException.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="VoiceTextWebAPI.Client.nuspec" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>if "$(ConfigurationName)" == "Release" goto PACK
-goto END
-:PACK
-pushd "$(ProjectDir)"
-"$(SolutionDir).nuget\nuget.exe" pack "$(ProjectPath)" -Prop Configuration=Release;Platform=AnyCPU -o $(OutDir)
-:END</PostBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
