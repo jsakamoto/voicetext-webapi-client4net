@@ -4,15 +4,17 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
     <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
     <Authors>J.Sakamoto</Authors>
-    <Version>2.0.0.1</Version>
+    <Version>3.0.0.0</Version>
     <Description>This library is the client of [HOYA Voice Text Web API](https://cloud.voicetext.jp/webapi) for .NET.</Description>
-    <Copyright>Copyright © J.Sakamoto 2014-2018, MIT License</Copyright>
+    <Copyright>Copyright © J.Sakamoto 2014-2019, MIT License</Copyright>
     <Product>.NET Client for VoiceText Web API</Product>
     <PackageLicenseUrl>https://github.com/jsakamoto/voicetext-webapi-client4net/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/jsakamoto/voicetext-webapi-client4net</PackageProjectUrl>
     <RepositoryUrl></RepositoryUrl>
     <PackageTags>voicetext,voice,speach</PackageTags>
-    <PackageReleaseNotes>v.2.0.0.1
+    <PackageReleaseNotes>v.3.0
+- [Breaking Change] "EmotionLevel" range is more precise. 
+v.2.0.0.1
 - support .NET Standard 2.0
 v.2.0
 - [Breaking Change] Remove aac format. 

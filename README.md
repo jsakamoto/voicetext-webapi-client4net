@@ -34,6 +34,18 @@ public async void btn_OnClick()
 }
 ```
 
+Release Note
+------------
+
+- **v.3.0** - [Breaking Change] "EmotionLevel" range is more precise. 
+- **v.2.0.0.1** - support .NET Standard 2.0
+- **v.2.0** - [Breaking Change] Remove aac format. 
+- **v.1.4** - Add mp3 format.
+- **v.1.3** - Can chose voice file format from wav/ogg/aac.
+- **v.1.2** - Add speaker "Bear"(Berserk Bear)!
+- **v.1.1** - Add speaker "Santa"(Santa Claus)!
+- **v.1.0** - First release.
+
 License
 -------
-Copyright (c) 2014-2018 @jsakamoto. Licensed under the MIT license.
+Copyright (c) 2014-2019 @jsakamoto. Licensed under the MIT license.
